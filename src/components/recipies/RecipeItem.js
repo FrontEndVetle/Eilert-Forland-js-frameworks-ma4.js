@@ -1,11 +1,13 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
+import PropTypes from "prop-types";
 
 
-function RecipeItem({ title, image }) {
+
+function RecipeItem({ title, thumbnail }) {
     return (
         <Card>
-            <Card.Img variant="top" src={image} />
+            <Card.Img variant="top" src={thumbnail} />
             <Card.Body>
                 <Card.Title>{title}</Card.Title>
             </Card.Body>
@@ -14,8 +16,8 @@ function RecipeItem({ title, image }) {
 }
 
 RecipeItem.propTypes = {
-    name: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired,
+    thumbnail: PropTypes.string.isRequired
 };
 
 export default RecipeItem;
