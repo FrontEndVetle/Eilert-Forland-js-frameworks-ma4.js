@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { BASE_URL } from "../../constants/api";
 import RecipeItem from "./RecipeItem";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -17,7 +18,7 @@ function RecipeList() {
 
 
     useEffect(() => {
-        fetch("https://cors-anywhere.herokuapp.com/http://www.recipepuppy.com/api/")
+        fetch(BASE_URL)
             .then(response => response.json())
          .then(json => {
             setRecipes(json.results);
