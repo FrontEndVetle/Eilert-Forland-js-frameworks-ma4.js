@@ -46,11 +46,11 @@ const filterCards = function(e) {
         <Search handleSearch={filterCards} />
 
                 {filteredRecipes.map(recipe => {
-            const { title, thumbnail } = recipe;
+            const { title, thumbnail, ingredients } = recipe;
 
             return (
-                <Col sm={6} md={3} key={title}>
-                    <RecipeItem title={title} thumbnail={thumbnail} />
+                <Col sm={6} md={2} key={title}>
+                    <RecipeItem title={title} thumbnail={thumbnail} ingredients={ingredients}/>
                 </Col>
             );
         })}

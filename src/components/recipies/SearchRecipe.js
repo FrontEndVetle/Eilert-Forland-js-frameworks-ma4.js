@@ -6,7 +6,7 @@ export default function Search({ handleSearch }) {
     return (
         <InputGroup className="search">
             <FormControl
-                placeholder="Search.."
+                placeholder=" Search for recipe.."
                 onChange={event => handleSearch(event)}
             />
         </InputGroup>
